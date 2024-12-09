@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image'; // Importing the Image component
 import { FaHeart, FaCog, FaUsers, FaGasPump } from 'react-icons/fa';
 
 interface Product {
@@ -17,7 +18,13 @@ const PopularCard: React.FC<Product> = ({ image, name, description, numberofpeop
   return (
     <div className="w-[304px] h-[388px] bg-white rounded-lg relative overflow-hidden" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
       <div className="relative w-full h-[250px] flex items-center justify-center">
-        <img src={image} alt="Car" className="w-[232px] h-[72px] object-cover rounded-lg mt-16" />
+        <Image
+          src={image}
+          alt="Car"
+          width={232} // Define the width of the image
+          height={72} // Define the height of the image
+          className="object-cover rounded-lg mt-16"
+        />
         <div className="absolute top-2 right-2 p-2 w-10 h-10 flex items-center justify-center">
           <FaHeart className="text-red-500" />
         </div>
@@ -58,65 +65,4 @@ const PopularCard: React.FC<Product> = ({ image, name, description, numberofpeop
   );
 };
 
-const ProductRow: React.FC = () => {
-  const products: Product[] = [
-    { image: 'hero1.png', name: "Koenigsegg", description: "Sport", numberofpeople: 2, liters: 90, price: 99.00, discount: 40, showDiscount: false },
-    { image: 'hero2.png', name: "Nissan GT-R", description: "Sport", numberofpeople: 2, liters: 80, price: 80.00, oldPrice: 100.00, discount: 35, showDiscount: true },
-    { image: 'Car.png', name: "Rolls-Royce", description: "Sedan", numberofpeople: 2, liters: 70, price: 96.00, showDiscount: false },
-    { image: 'hero2.png', name: "Nissan GT-R", description: "Sport", numberofpeople: 2, liters: 80, price: 80.00, oldPrice: 100.00, discount: 35, showDiscount: true },
-  ];
-
-  return (
-    <div className="mt-8">
-      <div className="overflow-x-auto flex space-x-6 pb-6 md:hidden">
-        {products.map((product, index) => (
-          <div key={index} className="flex-shrink-0">
-            <PopularCard
-              image={product.image}
-              description={product.description}
-              name={product.name}
-              price={product.price}
-              numberofpeople={product.numberofpeople}
-              liters={product.liters}
-              oldPrice={product.oldPrice}
-              discount={product.discount}
-              showDiscount={product.showDiscount}
-            />
-          </div>
-        ))}
-      </div>
-      <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {products.map((product, index) => (
-          <PopularCard
-            key={index}
-            image={product.image}
-            description={product.description}
-            name={product.name}
-            price={product.price}
-            numberofpeople={product.numberofpeople}
-            liters={product.liters}
-            oldPrice={product.oldPrice}
-            discount={product.discount}
-            showDiscount={product.showDiscount}
-          />
-        ))}
-      </div>
-    </div>
-  );
-};
-
-const App: React.FC = () => {
-  return (
-    <div className="bg-gray-100" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex justify-between items-center mb-8">
-          <h1 className="text-xl text-gray-400">Popular Car</h1>
-          <a href="#" className="text-blue-600 text-lg font-semibold">View All</a>
-        </div>
-        <ProductRow />
-      </div>
-    </div>
-  );
-};
-
-export default App;
+export default PopularCard;
