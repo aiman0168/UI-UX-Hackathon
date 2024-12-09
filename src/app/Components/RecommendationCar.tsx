@@ -18,8 +18,9 @@ const RecommentionCard: React.FC<Product> = ({ image, name, description, numbero
   return (
     <div className="w-full sm:w-[304px] h-[388px] bg-white rounded-lg relative overflow-hidden" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
       <div className="relative w-full h-[250px] flex items-center justify-center">
+        {/* Use relative path from the public directory */}
         <Image
-          src={image}
+          src={image} // e.g., "/car1.png"
           alt="Car"
           width={248} // Specify the width of the image
           height={100} // Specify the height of the image
@@ -67,14 +68,14 @@ const RecommentionCard: React.FC<Product> = ({ image, name, description, numbero
 
 const ProductRow: React.FC = () => {
   const products: Product[] = [
-    { image: 'car1.png', name: "All New Rush", description: "SUV", numberofpeople: 6, liters: 70, price: 92.00, oldPrice: 80.00, discount: 12, showDiscount: true },
-    { image: 'car2.png', name: "CR-V", description: "SUV", numberofpeople: 6, liters: 80, price: 80.00, discount: 35, showDiscount:false },
-    { image: 'car3.png', name: "All New Terios", description: "SUV", numberofpeople: 6, liters: 90, price: 74.00, showDiscount: false },
-    { image: 'car4.png', name: "CR-V", description: "SUV", numberofpeople: 6, liters: 80, price: 80.00, discount: 35, showDiscount: false },
-    { image: 'car5.png', name: "MGZX Exclusive", description: "Hatchback", numberofpeople: 4, liters: 70, price: 76.00, oldPrice: 80.00, discount: 4, showDiscount: true },
-    { image: 'car6.png', name: "New MGZS", description: "SUV", numberofpeople: 6, liters: 80, price: 80.00, discount: 35, showDiscount: false },
-    { image: 'car5.png', name: "MGZX Exite", description: "Hatchback", numberofpeople: 4, liters: 90, price: 74.00, showDiscount: false },
-    { image: 'car6.png', name: "Nissan GT-R", description: "SUV", numberofpeople: 6, liters: 80, price: 80.00, discount: 35, showDiscount: false },
+    { image: '/car1.png', name: "All New Rush", description: "SUV", numberofpeople: 6, liters: 70, price: 92.00, oldPrice: 80.00, discount: 12, showDiscount: true },
+    { image: '/car2.png', name: "CR-V", description: "SUV", numberofpeople: 6, liters: 80, price: 80.00, discount: 35, showDiscount:false },
+    { image: '/car3.png', name: "All New Terios", description: "SUV", numberofpeople: 6, liters: 90, price: 74.00, showDiscount: false },
+    { image: '/car4.png', name: "CR-V", description: "SUV", numberofpeople: 6, liters: 80, price: 80.00, discount: 35, showDiscount: false },
+    { image: '/car5.png', name: "MGZX Exclusive", description: "Hatchback", numberofpeople: 4, liters: 70, price: 76.00, oldPrice: 80.00, discount: 4, showDiscount: true },
+    { image: '/car6.png', name: "New MGZS", description: "SUV", numberofpeople: 6, liters: 80, price: 80.00, discount: 35, showDiscount: false },
+    { image: '/car5.png', name: "MGZX Exite", description: "Hatchback", numberofpeople: 4, liters: 90, price: 74.00, showDiscount: false },
+    { image: '/car6.png', name: "Nissan GT-R", description: "SUV", numberofpeople: 6, liters: 80, price: 80.00, discount: 35, showDiscount: false },
   ];
 
   return (
