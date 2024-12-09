@@ -109,7 +109,7 @@ const DashboardPage = () => {
           </div>
           <div className="text-right">
             <p className="font-semibold text-lg">Nissan GT-R</p>
-            <p className="text-gray-500">#9761</p>
+            <p className="text-gray-500">20 July</p>
           </div>
         </div>
         <div className="flex items-center justify-between mt-6">
@@ -117,8 +117,8 @@ const DashboardPage = () => {
             <Image src="/hero1.png" alt="Car 1" width={116} height={36} className="ml-2 mt-6" />
           </div>
           <div className="text-right">
-            <p className="font-semibold text-lg">Nissan GT-R</p>
-            <p className="text-gray-500">#9761</p>
+            <p className="font-semibold text-lg">Koegnigsegg</p>
+            <p className="text-gray-500">19 July</p>
           </div>
         </div>
         <div className="flex items-center justify-between mt-6">
@@ -126,8 +126,8 @@ const DashboardPage = () => {
             <Image src="/car4.png" alt="Car 1" width={116} height={36} className="ml-2 mt-6" />
           </div>
           <div className="text-right">
-            <p className="font-semibold text-lg">Nissan GT-R</p>
-            <p className="text-gray-500">#9761</p>
+            <p className="font-semibold text-lg">Rolls-Royce</p>
+            <p className="text-gray-500">18 July</p>
           </div>
         </div>
         <div className="flex items-center justify-between mt-6">
@@ -135,8 +135,8 @@ const DashboardPage = () => {
             <Image src="/Car.png" alt="Car 1" width={116} height={36} className="ml-2 mt-6" />
           </div>
           <div className="text-right">
-            <p className="font-semibold text-lg">Nissan GT-R</p>
-            <p className="text-gray-500">#9761</p>
+            <p className="font-semibold text-lg">CR-V</p>
+            <p className="text-gray-500">17 July</p>
           </div>
         </div>
       </div>
