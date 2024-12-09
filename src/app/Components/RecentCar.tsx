@@ -1,6 +1,4 @@
-'use client';
-import React, { useState } from 'react';
-import { FaUser, FaBell, FaCog, FaHeart, FaBars, FaTimes } from 'react-icons/fa';
+import { FaUser, FaBell, FaCog, FaHeart, FaBars} from 'react-icons/fa';
 import Image from 'next/image';
 
 const Navbar = ({ onHamburgerClick }: { onHamburgerClick: () => void }) => {
