@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaHeart, FaCog, FaUsers, FaGasPump } from 'react-icons/fa';
+import Image from 'next/image'; // Import Image component
 
 interface Product {
   image: string;
@@ -17,7 +18,13 @@ const RecommentionCard: React.FC<Product> = ({ image, name, description, numbero
   return (
     <div className="w-full sm:w-[304px] h-[388px] bg-white rounded-lg relative overflow-hidden" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
       <div className="relative w-full h-[250px] flex items-center justify-center">
-        <img src={image} alt="Car" className="w-[248px] h-[100px] object-cover rounded-lg mt-16" />
+        <Image
+          src={image}
+          alt="Car"
+          width={248} // Specify the width of the image
+          height={100} // Specify the height of the image
+          className="object-cover rounded-lg mt-16"
+        />
         <div className="absolute top-2 right-2 p-2 w-10 h-10 flex items-center justify-center">
           <FaHeart className="text-red-500" />
         </div>
