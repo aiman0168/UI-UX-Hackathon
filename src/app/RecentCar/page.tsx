@@ -65,9 +65,9 @@ const RecentCar = () => {
             </div>
 
             <p className="text-gray-500 mt-4">
-              NISMO has become the embodiment of Nissan's<br />
+              NISMO has become the embodiment of Nissan&apos;s<br />
               outstanding performance, inspired by the most<br />
-              unforgiving proving ground, the "race track".
+              unforgiving proving ground, the &quot;race track&quot;.
             </p>
 
             <div className="grid grid-cols-2 gap-4 mt-6">
