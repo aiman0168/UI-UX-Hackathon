@@ -101,10 +101,12 @@ const Navbar = () => {
           <div className="mb-6">
             <h4 className="text-xs text-gray-400 mt-6 ml-6 mb-4">MAIN MENU</h4>
             <div className="space-y-4">
+              <Link href="../Dashboard">
               <label className="flex items-center space-x-2 cursor-pointer text-gray-400 hover:bg-blue-500 hover:text-white transition-all px-4 py-2 rounded-md">
                 <FaTachometerAlt />
                 <span>Dashboard</span>
               </label>
+                </Link>
               <Link href="../RecentCar">
                 <label className="flex items-center space-x-2 cursor-pointer text-gray-400 hover:bg-blue-500 hover:text-white transition-all px-4 py-2 rounded-md mt-4">
                   <FaCar />
