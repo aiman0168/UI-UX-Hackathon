@@ -121,10 +121,12 @@ const Navbar = () => {
                 <FaWallet />
                 <span>Reimburse</span>
               </label>
-              <label className="flex items-center space-x-2 cursor-pointer text-gray-400 hover:bg-blue-500 hover:text-white transition-all px-4 py-2 rounded-md">
+              <Link href="../Payment">
+              <label className="flex items-center space-x-2 cursor-pointer text-gray-400 hover:bg-blue-500 hover:text-white transition-all px-4 py-2 rounded-md mt-4">
                 <FaInbox />
                 <span>Inbox</span>
               </label>
+                </Link>
               <label className="flex items-center space-x-2 cursor-pointer text-gray-400 hover:bg-blue-500 hover:text-white transition-all px-4 py-2 rounded-md">
                 <FaCalendarAlt />
                 <span>Calendar</span>
